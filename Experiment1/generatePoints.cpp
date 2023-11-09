@@ -10,8 +10,8 @@ struct Point{
     int x;
     int y;
 };
-#define MAX_X 1000
-#define MAX_Y 1000
+#define MAX_X 10000
+#define MAX_Y 10000
 
 int hashIt(int x, int y) {
     return x * (MAX_Y + 1) + y;

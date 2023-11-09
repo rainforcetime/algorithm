@@ -100,29 +100,29 @@ void convexHullBySlope(vector<Point>& points, int numPoints) {
     outFile.close();
 }
 
-int main() {
-    int n = 100; // 假设有100个点
-    vector<Point> points(n);
-
-    // 从文件中读取点的数量和坐标并填充到点数组中
-    ifstream file("random_points_100.txt");
-    if (!file.is_open()) {
-        cerr << "File open error" << endl;
-        return 1;
-    }
-
-    for (int i = 0; i < n; i++) {
-        if (!(file >> points[i].x >> points[i].y)) {
-            cerr << "File read error" << endl;
-            file.close();
-            return 1;
-        }
-    }
-
-    file.close();
-
-    convexHullBySlope(points, n);
-
-    return 0;
-}
+//int main() {
+//    int n = 100000; // 假设有100个点
+//    vector<Point> points(n);
+//
+//    // 从文件中读取点的数量和坐标并填充到点数组中
+//    ifstream file("random_points_100000.txt");
+//    if (!file.is_open()) {
+//        cerr << "File open error" << endl;
+//        return 1;
+//    }
+//
+//    for (int i = 0; i < n; i++) {
+//        if (!(file >> points[i].x >> points[i].y)) {
+//            cerr << "File read error" << endl;
+//            file.close();
+//            return 1;
+//        }
+//    }
+//
+//    file.close();
+//
+//    convexHullBySlope(points, n);
+//
+//    return 0;
+//}
 
