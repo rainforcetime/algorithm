@@ -1,0 +1,3 @@
+D:\Software\Jetbrains\apps\CLion\ch-0\223.8836.42\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\Experiment1.dir/objects.a
+D:\Software\Jetbrains\apps\CLion\ch-0\223.8836.42\bin\mingw\bin\ar.exe qc CMakeFiles\Experiment1.dir/objects.a @CMakeFiles\Experiment1.dir\objects1.rsp
+D:\Software\Jetbrains\apps\CLion\ch-0\223.8836.42\bin\mingw\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Experiment1.dir/objects.a -Wl,--no-whole-archive -o Experiment1.exe -Wl,--out-implib,libExperiment1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Experiment1.dir\linklibs.rsp
