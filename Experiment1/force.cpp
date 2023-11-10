@@ -28,6 +28,7 @@ bool isLeftTurn(const Point& a, const Point& b, const Point& c) {
 // 使用斜率方法解决凸包问题
 void convexHullBySlope(vector<Point>& points, int numPoints) {
     int n = points.size();
+    cout<<"test"<<endl;
 
     if (n < 3) {
         cout << "Convex hull cannot be formed" << endl;
@@ -42,8 +43,10 @@ void convexHullBySlope(vector<Point>& points, int numPoints) {
     string outputFilename = filenameStream.str();
 
     outFile.open(outputFilename);
+    cout<<"test2"<<endl;
 
     for (int i = 0; i < n; i++) {
+        cout<<"test"<<i<<endl;
         Point a = points[i];
         bool onLeft = false, onRight = false;
 
@@ -100,29 +103,33 @@ void convexHullBySlope(vector<Point>& points, int numPoints) {
     outFile.close();
 }
 
-//int main() {
-//    int n = 100000; // 假设有100个点
-//    vector<Point> points(n);
-//
-//    // 从文件中读取点的数量和坐标并填充到点数组中
-//    ifstream file("random_points_100000.txt");
-//    if (!file.is_open()) {
-//        cerr << "File open error" << endl;
-//        return 1;
-//    }
-//
-//    for (int i = 0; i < n; i++) {
-//        if (!(file >> points[i].x >> points[i].y)) {
-//            cerr << "File read error" << endl;
-//            file.close();
-//            return 1;
-//        }
-//    }
-//
-//    file.close();
-//
-//    convexHullBySlope(points, n);
-//
-//    return 0;
-//}
+int main() {
+    int n = 10000; // 假设有n个点
+    vector<Point> points(n);
+
+    // 从文件中读取点的数量和坐标并填充到点数组中
+    ifstream file("random_points_10000.txt");
+    if (!file.is_open()) {
+        cerr << "File open error" << endl;
+        return 1;
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (i % 10 == 0) {
+            cout<<"读取: ";
+            cout<<i<<"\n";
+        }
+        if (!(file >> points[i].x >> points[i].y)) {
+            cerr << "File read error" << endl;
+            file.close();
+            return 1;
+        }
+    }
+
+    file.close();
+
+    convexHullBySlope(points, n);
+
+    return 0;
+}
 
